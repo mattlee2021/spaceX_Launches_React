@@ -6,8 +6,8 @@ import {
   from '@apollo/client';
 import {LaunchesContainer} from './containers/LaunchesContainer';
 import './App.css';
-function App() {
 
+function App() {
 const client= new ApolloClient({
   uri:'https://api.spacex.land/graphql/',
   cache: new InMemoryCache()
@@ -20,7 +20,6 @@ const client= new ApolloClient({
         <LaunchesContainer />
       </main>
     </ApolloProvider>
-
   );
   
   

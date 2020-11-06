@@ -1,28 +1,33 @@
 import React from 'react';
+import ReactPlayer from "react-player";
 
 export function Launches({launch}){
     return (
         <div className="launch">
-            <div className="mission_name">
+            <div className="launch_data">
                 <p>Mission Name: {launch.mission_name}</p>
             </div>
 
-            <div className="launch_date_local">
+            <div className="launch_data">
             <p>Launch Date: {launch.launch_date_local}</p>
                 
             </div>
-            <div className="launch_site">
+            <div className="launch_data">
                 <p>Launch Site: {launch.launch_site.site_name_long}</p>
                 
             </div>
-            <div className="rocket_name">
+            <div className="launch_data">
                 <p>Rocket Name: {launch.rocket.rocket_name}</p>
                 
             </div>
             <div className="video_link">
-                <a href={launch.links.video_link}>Link to video</a>
-                {/*Have associated mission name for link*/} 
+                <ReactPlayer
+                url={launch.links.video_link}
+                controls={true}
+                />
             </div>
+            <br></br>
+            <hr className="solid"></hr>
         </div>
     )
 }
