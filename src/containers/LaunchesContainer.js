@@ -5,15 +5,26 @@ import {Launches} from '../components/launches';
 
 
 export function LaunchesContainer() {
-    const {data: { launchesPast= [] } = {} } = useQuery(GET_LAUNCHES, {
-    variables:{limit:5}, 
+    const {data,loading,error} = useQuery(GET_LAUNCHES, {
+    variables:{limit:3}, 
 });
+
+if(loading){
+    return ( <div className="Processing">Loading...</div>)
+}
+
+if(error){
+    console.error(error)
+    return (<div className="Processing">Error. Check the console.</div>)
+}
 
 return (
     <div className="container">
-        {launchesPast && launchesPast.map(launch => 
+        {data.launchesPast && data.launchesPast.map(launch => 
             <Launches key={launch.id} launch={launch}/> )}
     </div>
 )
+
+
 
 }

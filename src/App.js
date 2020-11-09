@@ -1,9 +1,4 @@
-import { 
-  ApolloProvider,  
-  ApolloClient, 
-  InMemoryCache,
-  } 
-  from '@apollo/client';
+import { ApolloProvider,ApolloClient,InMemoryCache,} from '@apollo/client';
 import {LaunchesContainer} from './containers/LaunchesContainer';
 import './App.css';
 
@@ -13,6 +8,10 @@ const client= new ApolloClient({
   cache: new InMemoryCache()
 });
 
+/**
+ * ApolloProvider component allows Apollo Client instance available throughout React 
+ * component tree.  
+ */
 
   return(
     <ApolloProvider client={client}> 

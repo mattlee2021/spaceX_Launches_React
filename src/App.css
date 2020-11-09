@@ -32,6 +32,20 @@ hr.solid {
   border-bottom:whitesmoke;
 }
 
+.Processing{
+  font-size: 90px;
+  text-align:center;
+  text-transform: capitalize;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 @media only screen and (min-width: 768px) {
   /* Copied from W3 Schools for 
       better responsive design; 

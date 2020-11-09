@@ -1,5 +1,9 @@
 import {gql, useQuery} from '@apollo/client';
 
+/**
+ * Query used to fetch data from SpaceX GraphQL API.
+ * This Query is used in LaunchesContainer.
+ */
 export const GET_LAUNCHES = gql`
 query launchesPast($limit: Int) {
     launchesPast(limit:$limit){
