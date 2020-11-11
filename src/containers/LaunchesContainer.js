@@ -4,13 +4,15 @@ import {GET_LAUNCHES} from '../graphql/get_launches';
 import {Launches} from '../components/launches';
 
 
+
 export function LaunchesContainer() {
     const {data,loading,error} = useQuery(GET_LAUNCHES, {
-    variables:{limit:3}, 
+    variables:{limit:10}, 
 });
 
+
 if(loading){
-    return ( <div className="Processing">Loading...</div>)
+    return (<div className="Processing">Loading...</div>)
 }
 
 if(error){
@@ -18,13 +20,11 @@ if(error){
     return (<div className="Processing">Error. Check the console.</div>)
 }
 
-return (
+return (    
     <div className="container">
-        {data.launchesPast && data.launchesPast.map(launch => 
-            <Launches key={launch.id} launch={launch}/> )}
-    </div>
+        {data.launchesPast && data.launchesPast.map(launch_data => 
+            <Launches key={launch_data.id} launch={launch_data}/>)}
+    </div>    
 )
-
-
 
 }
