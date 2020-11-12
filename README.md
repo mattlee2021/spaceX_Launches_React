@@ -4,7 +4,7 @@ This react page pulls in data from the SpaceX GraphQL API. The GraphQL fields di
 # Installation 
 - cd into the directory where you would like to clone this project
 - run `git clone https://github.com/mattlee2021/spaceX_Launches_React.git`
-- delete the node_modules folder in the spaceX_Launches_React folder
+- cd into spaceX_Launches_React
 - run `npm install`
 - run `npm start`
 
