@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactPlayer from "react-player";
-import Textbox from '../components/Textbox'
+import { Notesbox } from './Notesbox';
+/**
+ * 
+ * @param {GraphQL Data} launch One subset of data from the SpaceX GraphQL API. 
+ * This function returns HTML that is used to display different information about a 
+ * launch and a YouTube video of the launch.
+ */
 
 export function Launches({launch}){
     return (
@@ -28,7 +34,7 @@ export function Launches({launch}){
                 />
             </div>
             <br></br>
-            <Textbox /> 
+            <Notesbox /> 
             <hr className="solid"></hr>
         </div>
     )

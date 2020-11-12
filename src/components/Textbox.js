@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-class Textbox extends Component{
+
+/**
+ * A class component version of the notes textbox. I refactored this code to a functional
+ * component that can be found in Notesbox because I read that functional components 
+ * are preferred over class components in industry. The Textbox component is not used 
+ * in the app but is here to display an understanding of stateful components. 
+ */
+export default class Textbox extends Component{
     
     constructor(props){
         super(props)
@@ -16,14 +23,12 @@ class Textbox extends Component{
     handleSubmit = (event) =>{
         this.textArea.select()
         const copied_boolean = document.execCommand('copy');
-        //event.target.focus()
         event.preventDefault();
         if (copied_boolean==true){
             alert(`This note has been copied to the clipboard!`)
         }
     } 
     render(){
-        
         return (
             <form onSubmit={this.handleSubmit} className="Notes_form">
                 <div>
@@ -36,8 +41,6 @@ class Textbox extends Component{
                 <br></br>
                 <button>Copy This Note To Clipboard</button>
             </form>
-
         )
     }
 }
-export default Textbox
