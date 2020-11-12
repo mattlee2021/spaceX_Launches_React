@@ -2,7 +2,7 @@ import useForm from "../custom_Hooks/useForm";
 /**
  * This is a functional component of the notes textbox. A custom hook is imported to
  * handle updating the words displayed in the textbox and copying the text onto the user's
- * clipboard. 
+ * clipboard. This component is used in launches.js. 
  */
 
 export function Notesbox(){

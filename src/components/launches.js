@@ -5,7 +5,8 @@ import { Notesbox } from './Notesbox';
  * 
  * @param {GraphQL Data} launch One subset of data from the SpaceX GraphQL API. 
  * This function returns HTML that is used to display different information about a 
- * launch and a YouTube video of the launch.
+ * launch and a YouTube video of the launch. I am also using the <Notesbox /> component,
+ * which is a note taking feature that a user can use when watching one of the launch videos.
  */
 
 export function Launches({launch}){
