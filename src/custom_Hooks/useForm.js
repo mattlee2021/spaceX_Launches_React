@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 /**
  * Using useState() to declare state variable input_notes and declaring textAreaRef, which
@@ -23,7 +23,7 @@ const useForm = () => {
         textAreaRef.current.select();
         const copied_boolean = document.execCommand('copy');
         event.preventDefault();
-        if (copied_boolean==true){
+        if (copied_boolean===true){
             alert(`This note has been copied to the clipboard!`);
         }
     }
