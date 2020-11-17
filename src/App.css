@@ -69,7 +69,18 @@ button{
   margin:auto;
 }
 
+.Search_Mission_box{
+  left: 30px;
+  width: 300px;
+  height:20px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
 
+.Search_Mission{
+  position: relative;
+  left: 175px;
+}
 
 
 @media only screen and (min-width: 768px) {

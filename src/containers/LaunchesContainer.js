@@ -9,9 +9,9 @@ import {Launches} from '../components/launches';
  * If there are no errors and data has loaded, I am mapping each subset of launch data 
  * to the <Launches /> component. 
  */
-export function LaunchesContainer() {
+export function LaunchesContainer(props) {
     const {data,loading,error} = useQuery(GET_LAUNCHES, {
-    variables:{limit:10}, 
+    variables:{limit:10, filter_Mission:props.search}, 
 });
 
 
@@ -28,6 +28,7 @@ return (
     <div className="container">
         {data.launchesPast && data.launchesPast.map(launch_data => 
             <Launches key={launch_data.id} launch={launch_data}/>)}
+        
     </div>    
 )
 
