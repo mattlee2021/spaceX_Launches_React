@@ -5,8 +5,9 @@ import {gql} from '@apollo/client';
  * This Query is used in LaunchesContainer.
  */
 export const GET_LAUNCHES = gql`
-query launchesPast($limit: Int, $filter_Mission:String, $sort_by:String) {
-    launchesPast(limit:$limit, find:{mission_name:$filter_Mission},sort:$sort_by){
+query launchesPast($limit: Int, $filter_Mission:String, $filter_launchSite:String, $sort_by:String) {
+    launchesPast(limit:$limit, find:{mission_name:$filter_Mission, 
+        site_name_long:$filter_launchSite},sort:$sort_by){
         id
         mission_name
         launch_date_local
