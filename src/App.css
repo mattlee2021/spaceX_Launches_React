@@ -77,10 +77,18 @@ button{
   border-radius: 4px;
 }
 
-.Search_Mission{
+
+.Filtering{
   position: relative;
   left: 175px;
 }
+
+.sort_box {
+  width: 150px;
+  margin: 10px;
+}
+
+
 
 
 @media only screen and (min-width: 768px) {

@@ -10,8 +10,9 @@ import {Launches} from '../components/launches';
  * to the <Launches /> component. 
  */
 export function LaunchesContainer(props) {
+    console.log("Searched: ", props.search, "Sort By ", props.sort)
     const {data,loading,error} = useQuery(GET_LAUNCHES, {
-    variables:{limit:10, filter_Mission:props.search}, 
+    variables:{limit:10, filter_Mission:props.search, sort_by:props.sort}, 
 });
 
 
