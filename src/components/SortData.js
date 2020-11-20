@@ -1,12 +1,12 @@
 import {useState } from "react";
 
-export function Sort_component(props){
+export function SortDataFeature(props){
 
     const[sort_state, setSort_state]= useState(""); 
     const {onSubmit}= props;
 
     const handleChange_Sort = (event) => {
-        setSort_state(event.target.value)
+        setSort_state(event.target.value);
       }
  
       const onSubmit_Sort = (event) => {
@@ -14,7 +14,6 @@ export function Sort_component(props){
         onSubmit(sort_state);
       }
         
-    
     return (
         <form onSubmit={onSubmit_Sort} className="Filtering">  
             <label htmlFor="sorting">Sort By: </label>

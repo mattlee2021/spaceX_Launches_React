@@ -1,11 +1,11 @@
-import { ApolloProvider,ApolloClient,InMemoryCache,} from '@apollo/client';
-import {LaunchesContainer} from './containers/LaunchesContainer';
+import { ApolloProvider, ApolloClient, InMemoryCache, } from '@apollo/client';
+import { LaunchesContainer } from './containers/LaunchesContainer';
 import { useState } from "react";
 
 import './App.css';
-import { Search_component } from './components/Search_component';
-import { Sort_component } from './components/Sort_component';
-import { LaunchSite_Filter } from './components/Launch_Site_Filter_component';
+import { MissionNameSearch } from './components/MissionNameSearch';
+import { SortDataFeature } from './components/SortData';
+import { LaunchSiteFilter } from './components/LaunchSiteFilter';
 
 /**
  * Connecting to the SpaceX GraphQL API and displaying LaunchesContainer, which holds all 
@@ -15,41 +15,39 @@ import { LaunchSite_Filter } from './components/Launch_Site_Filter_component';
 
 function App() {
 
-  
+	const client = new ApolloClient({
+		uri: 'https://api.spacex.land/graphql/',
+		cache: new InMemoryCache()
+	});
 
-const [searched, searched_state] = useState("");
-const [sorted, sorted_state] = useState("");
-const[launchSite_state, launchSite_fetch]=useState("")
+	const [missionName_searched_state, searched_set] = useState("");
+	const [launchSite_filter_state, launchSite_set] = useState("");
+	const [sortBy_sort_state, sorted_set] = useState("");
 
-const client= new ApolloClient({
-  uri:'https://api.spacex.land/graphql/',
-  cache: new InMemoryCache()
-});
+	const missionName_searched_fetch = (search_pass) => {
+		searched_set(search_pass)
+	}
 
-const submit_search = (search_pass) => {
-  searched_state(search_pass)
-}
+	const launchSite_filter_fetch = (launchSite_pass) => {
+		launchSite_set(launchSite_pass)
+	}
 
-const submit_launchSite = (launchSite_pass) => {
-  launchSite_fetch(launchSite_pass)
-}
-
-const submit_sort = (sort_pass) => {
-  sorted_state(sort_pass)
-}
+	const sortBy_sort_fetch = (sort_pass) => {
+		sorted_set(sort_pass)
+	}
 
 
-  return(
-    <ApolloProvider client={client}> 
-      <main>
-        <Search_component onSubmit={submit_search}/>
-        <LaunchSite_Filter onSubmit={submit_launchSite}/>
-        <Sort_component onSubmit={submit_sort}/>
-        <LaunchesContainer search={searched}  launchSite_filter={launchSite_state} sort={sorted}/>
-      </main>
-    </ApolloProvider>
-  );
- 
+	return (
+		<ApolloProvider client={client}>
+			<main>
+				<MissionNameSearch onSubmit={missionName_searched_fetch} />
+				<LaunchSiteFilter onSubmit={launchSite_filter_fetch} />
+				<SortDataFeature onSubmit={sortBy_sort_fetch} />
+				<LaunchesContainer search={missionName_searched_state} launchSite_filter={launchSite_filter_state} sort={sortBy_sort_state} />
+			</main>
+		</ApolloProvider>
+	);
+
 }
 
 export default App;
