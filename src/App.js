@@ -8,8 +8,10 @@ import { SortDataFeature } from './components/SortData';
 import { LaunchSiteFilter } from './components/LaunchSiteFilter';
 
 /**
- * Connecting to the SpaceX GraphQL API and displaying LaunchesContainer, which holds all 
- * my components. 
+ * This function connecting to the SpaceX GraphQL API and displaying LaunchesContainer, which holds all 
+ * my components. All containers and components are used in this method to create the web page.
+ * Furthermore, information from the sorting, filtering, and searching component is passed to this function,
+ * which then passes the relevant information to LaunchesContainer, which helps to fetch the GraphQL data.
  */
 
 

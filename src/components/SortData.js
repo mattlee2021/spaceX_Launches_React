@@ -1,5 +1,11 @@
 import {useState } from "react";
 
+/**
+ * This function sorts the displayed information from the SpaceX GraphQL API. Since the Launch Site and 
+ * Mission Name fields are composed of words, this function will sort alphabetically according to the 
+ * selected choice. For Launch Date, this function will sort the the launches in chronological order. 
+ */
+
 export function SortDataFeature(props){
 
     const[sort_state, setSort_state]= useState(""); 
