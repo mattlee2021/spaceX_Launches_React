@@ -11,11 +11,10 @@ import { useState } from "react";
 
 export function LaunchSiteFilter(props) {
     const [launchSite_state, launchSite_set] = useState("");
-    const { onSubmit } = props; 
+    const { onSubmit } = props;
 
     const handleChange_launchSite = (event) => {
         launchSite_set(event.target.value)
-
     }
     const onSubmit_launchSite = (event) => {
         event.preventDefault()
@@ -31,7 +30,7 @@ export function LaunchSiteFilter(props) {
             <label>Cape Canaveral</label>
             <input type="radio" name="site_selection" value="Kennedy Space Center"></input>
             <label>Kennedy Space Center</label>
-            <input type="radio" name="site_selection" value=""></input> 
+            <input type="radio" name="site_selection" value=""></input>
             <label>Show All</label>
             <button type="submit">Filter</button>
         </form>

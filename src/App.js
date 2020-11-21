@@ -3,9 +3,9 @@ import { LaunchesContainer } from './containers/LaunchesContainer';
 import { useState } from "react";
 
 import './App.css';
-import { MissionNameSearch } from './components/MissionNameSearch';
-import { SortDataFeature } from './components/SortData';
-import { LaunchSiteFilter } from './components/LaunchSiteFilter';
+import { MissionNameSearch } from './containers/MissionNameSearch';
+import { SortDataFeature } from './containers/SortData';
+import { LaunchSiteFilter } from './containers/LaunchSiteFilter';
 
 /**
  * This function connecting to the SpaceX GraphQL API and displaying LaunchesContainer, which holds all 

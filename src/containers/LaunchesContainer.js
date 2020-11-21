@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_LAUNCHES } from '../graphql/get_launches';
-import { Launches } from '../components/launches';
+import { Launches } from '../components/DisplayLaunches';
 
 /**
  * Fetching 10 SpaceX Launches with limit:10 that is passed to GET_LAUNCHES.
