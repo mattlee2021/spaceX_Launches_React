@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPlayer from "react-player";
-import { Notesbox } from '../containers/Notesbox';
+import { Notesbox } from '../Features/Notesbox';
 /**
  * 
  * @param {GraphQL Data} launch One subset of data from the SpaceX GraphQL API. 

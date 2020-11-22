@@ -1,11 +1,11 @@
 import { ApolloProvider, ApolloClient, InMemoryCache, } from '@apollo/client';
-import { LaunchesContainer } from './containers/LaunchesContainer';
+import { LaunchesContainer } from './PrimaryDisplay/LaunchesContainer';
 import { useState } from "react";
 
 import './App.css';
-import { MissionNameSearch } from './containers/MissionNameSearch';
-import { SortDataFeature } from './containers/SortData';
-import { LaunchSiteFilter } from './containers/LaunchSiteFilter';
+import { MissionNameSearch } from './Features/MissionNameSearch';
+import { SortDataFeature } from './Features/SortData';
+import { LaunchSiteFilter } from './Features/LaunchSiteFilter';
 
 /**
  * This function connecting to the SpaceX GraphQL API and displaying LaunchesContainer, which holds all 

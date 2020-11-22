@@ -1,4 +1,4 @@
-import useForm from "../custom_Hooks/useForm";
+import useForm from "../CustomHooks/useForm";
 /**
  * This is a functional component of the notes textbox. A custom hook is imported to
  * handle updating the words displayed in the textbox and copying the text onto the user's
@@ -15,7 +15,7 @@ export function Notesbox(){
                 <label>Notes</label>
                 <br></br>
                 <br></br>
-                <textarea value={input_notes.notes} onChange={handleChange} 
+                <textarea value={input_notes} onChange={handleChange} 
                 className="Notes_box" ref={textAreaRef}/>
             </div>
             <br></br>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 
 /**
  * This function allows a user to search for SpaceX Launches by mission name. A user can type in any String
@@ -9,34 +9,26 @@ import { useState } from "react";
  */
 
 export function MissionNameSearch(props) {
-	const [searchTerm_state, setSearchTerm] = useState("");
+
 	const { onSubmit } = props;
-
-	const handleChange = (event) => {
-		setSearchTerm(event.target.value)
-	}
-
-	const clearSearch_state = () => {
-		setSearchTerm("")
-	}
-	const onSubmit_form = (event) => {
-		event.preventDefault();
-		onSubmit(searchTerm_state);
-	}
+	const { handleChange1, clearSearch_state, this_state, handleSubmit1 } = UpdateSubmitHook(onSubmit);
 
 	return (
-		<form onSubmit={onSubmit_form}>
+		<form onSubmit={handleSubmit1}>
 			<div className="Filtering">
 				<input
 					className="Search_Mission_box"
 					type="text"
 					placeholder="Search For Any Past SpaceX Mission"
-					value={searchTerm_state}
-					onChange={handleChange}
+					value={this_state}
+					onChange={handleChange1}
 				/>
 				<button type="submit">Search</button>
 				<button type="reset" onClick={clearSearch_state}>Clear Search</button>
 			</div>
 		</form>
 	);
+
+
+
 }

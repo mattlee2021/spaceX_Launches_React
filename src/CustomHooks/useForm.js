@@ -8,11 +8,12 @@ import { useRef, useState } from "react";
  */
 
 const useForm = () => {
-    const[input_notes, setInput_notes]= useState({});
+
+    const[input_notes, setInput_notes]= useState("");
     const textAreaRef = useRef(null);
 
     const handleChange = (event) => {
-        setInput_notes(input_notes => ({ ...input_notes, [event.target.name]: event.target.value }));
+        setInput_notes(event.target.value)
     };
 
     const handleSubmit = (event) => {
