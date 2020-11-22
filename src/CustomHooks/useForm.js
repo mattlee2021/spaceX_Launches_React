@@ -12,11 +12,11 @@ const useForm = () => {
     const[input_notes, setInput_notes]= useState("");
     const textAreaRef = useRef(null);
 
-    const handleChange = (event) => {
+    const handleChange_Notes = (event) => {
         setInput_notes(event.target.value)
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit_Notes = (event) => {
         textAreaRef.current.select();
         const copied_boolean = document.execCommand('copy');
         event.preventDefault();
@@ -26,9 +26,9 @@ const useForm = () => {
     }
     
 return {
-    handleChange,
+    handleChange_Notes,
     input_notes,
-    handleSubmit,
+    handleSubmit_Notes,
     textAreaRef
     }   
 };

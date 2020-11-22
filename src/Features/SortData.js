@@ -9,12 +9,12 @@ import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 export function SortDataFeature(props) {
 
   const { onSubmit } = props;
-  const { handleChange1, handleSubmit1 } = UpdateSubmitHook(onSubmit);
+  const { handleChange, handleSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form onSubmit={handleSubmit1} className="Filtering">
+    <form onSubmit={handleSubmit} className="Filtering">
       <label htmlFor="sorting">Sort By: </label>
-      <select onChange={handleChange1} className="sort_box">
+      <select onChange={handleChange} className="sort_box">
         <option value="">None</option>
         <option value="site_name_long">Launch Site</option>
         <option value="launch_date_local">Launch Date</option>

@@ -10,6 +10,7 @@ import { Notesbox } from '../Features/Notesbox';
  */
 
 export function Launches({ launch }) {
+
     return (
         <div className="launch">
             <div className="launch_data">
@@ -39,4 +40,5 @@ export function Launches({ launch }) {
             <hr className="solid"></hr>
         </div>
     )
+    
 }

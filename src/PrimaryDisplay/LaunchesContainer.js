@@ -11,7 +11,7 @@ import { Launches } from './DisplayLaunches';
  */
 export function LaunchesContainer(props) {
     //Used For Debugging
-    console.log("Searched: ", props.search, "; Filter is ", props.launchSite_filter, "; Sort By ", props.sort)
+    //console.log("Searched: ", props.search, "; Filter is ", props.launchSite_filter, "; Sort By ", props.sort)
     const { data, loading, error } = useQuery(GET_LAUNCHES, {
         variables: {
             limit: 20, filter_Mission: props.search,
@@ -28,7 +28,7 @@ export function LaunchesContainer(props) {
         return (<div className="Processing">Error. Check the console.</div>)
     }
 
-    else {
+    else { 
         return (
             <div className="container">
                 {data.launchesPast && data.launchesPast.map(launch_data =>

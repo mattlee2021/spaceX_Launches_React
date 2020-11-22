@@ -38,7 +38,6 @@ function App() {
 		sorted_set(sort_pass)
 	}
 
-
 	return (
 		<ApolloProvider client={client}>
 			<main>

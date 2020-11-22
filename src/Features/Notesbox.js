@@ -7,15 +7,15 @@ import useForm from "../CustomHooks/useForm";
 
 export function Notesbox(){
 
-    const {handleChange, input_notes, handleSubmit, textAreaRef} = useForm();
+    const {handleChange_Notes, input_notes, handleSubmit_Notes, textAreaRef} = useForm();
     
     return (
-        <form onSubmit={handleSubmit} className="Notes_form">
+        <form onSubmit={handleSubmit_Notes} className="Notes_form">
             <div>
                 <label>Notes</label>
                 <br></br>
                 <br></br>
-                <textarea value={input_notes} onChange={handleChange} 
+                <textarea value={input_notes} onChange={handleChange_Notes} 
                 className="Notes_box" ref={textAreaRef}/>
             </div>
             <br></br>
