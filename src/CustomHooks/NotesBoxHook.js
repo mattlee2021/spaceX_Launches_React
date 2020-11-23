@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
  * that copies the text in the textbox when the user hits the submit button.
  */
 
-const useForm = () => {
+const NotesBoxHook = () => {
 
     const[input_notes, setInput_notes]= useState("");
     const textAreaRef = useRef(null);
@@ -33,5 +33,5 @@ return {
     }   
 };
 
-export default useForm;
+export default NotesBoxHook;
 
