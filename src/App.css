@@ -62,11 +62,31 @@ button{
   cursor: pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  margin:10px;
 }
 
 .Notes_form{
   text-align:center;
   margin:auto;
+}
+
+.Search_Mission_box{
+  left: 30px;
+  width: 300px;
+  height:20px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+
+.Filtering{
+  position: relative;
+  left: 175px;
+}
+
+.sort_box {
+  width: 150px;
+  margin: 10px;
 }
 
 

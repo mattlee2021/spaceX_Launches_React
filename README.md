@@ -2,7 +2,6 @@
 This react page pulls in data from the SpaceX GraphQL API. The GraphQL fields displayed concern different SpaceX missions with information on place/date of launch, rocket used, and an official SpaceX video of the launch. 
 
 # Installation 
-- cd into the directory where you would like to clone this project
 - run `git clone https://github.com/mattlee2021/spaceX_Launches_React.git`
 - cd into spaceX_Launches_React
 - run `npm install`

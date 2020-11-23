@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPlayer from "react-player";
-import { Notesbox } from './Notesbox';
+import { Notesbox } from '../Features/Notesbox';
 /**
  * 
  * @param {GraphQL Data} launch One subset of data from the SpaceX GraphQL API. 
@@ -9,34 +9,36 @@ import { Notesbox } from './Notesbox';
  * which is a note taking feature that a user can use when watching one of the launch videos.
  */
 
-export function Launches({launch}){
+export function Launches({ launch }) {
+
     return (
         <div className="launch">
             <div className="launch_data">
                 <p>Mission Name: {launch.mission_name}</p>
-                
+
             </div>
             <div className="launch_data">
                 <p>Launch Date: {launch.launch_date_local}</p>
-                
+
             </div>
             <div className="launch_data">
                 <p>Launch Site: {launch.launch_site.site_name_long}</p>
-                
+
             </div>
             <div className="launch_data">
                 <p>Rocket Name: {launch.rocket.rocket_name}</p>
-                
+
             </div>
             <div className="video_link">
                 <ReactPlayer
-                url={launch.links.video_link}
-                controls={true}
+                    url={launch.links.video_link}
+                    controls={true}
                 />
             </div>
             <br></br>
-            <Notesbox /> 
+            <Notesbox />
             <hr className="solid"></hr>
         </div>
     )
+    
 }
