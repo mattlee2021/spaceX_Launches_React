@@ -9,18 +9,17 @@ import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 export function SortDataFeature(props) {
 
   const { onSubmit } = props;
-  const { handleChange, handleSubmit } = UpdateSubmitHook(onSubmit);
+  const { OneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form onSubmit={handleSubmit} className="Filtering">
+    <form className="Filtering">
       <label htmlFor="sorting">Sort By: </label>
-      <select onChange={handleChange} className="sort_box">
+      <select onChange={OneClickSubmit} className="sort_box">
         <option value="">None</option>
         <option value="site_name_long">Launch Site</option>
         <option value="launch_date_local">Launch Date</option>
         <option value="mission_name">Mission Name</option>
       </select>
-      <button type="submit">Submit</button>
     </form>
   );
 

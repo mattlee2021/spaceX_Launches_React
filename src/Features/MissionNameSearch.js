@@ -11,10 +11,10 @@ import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 export function MissionNameSearch(props) {
 
 	const { onSubmit } = props;
-	const { handleChange, clearSearch_state, this_state, handleSubmit } = UpdateSubmitHook(onSubmit);
+	const { handleChange, clearSearch_state, this_state, handleSubmitSearch } = UpdateSubmitHook(onSubmit);
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmitSearch}>
 			<div className="Filtering">
 				<input
 					className="Search_Mission_box"

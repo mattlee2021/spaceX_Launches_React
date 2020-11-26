@@ -12,10 +12,10 @@ import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 export function LaunchSiteFilter(props) {
     
     const { onSubmit } = props;
-    const { handleChange, handleSubmit } = UpdateSubmitHook(onSubmit);
+    const { OneClickSubmit } = UpdateSubmitHook(onSubmit);
 
     return (
-        <form onSubmit={handleSubmit} onChange={handleChange} className="Filtering">
+        <form onChange={OneClickSubmit} className="Filtering">
             <label htmlFor="filter_by_launchSite">Filter By Launch Site: </label>
             <input type="radio" name="site_selection" value="Kwajalein Atoll"></input>
             <label>Kwajalein Atoll</label>
@@ -25,7 +25,6 @@ export function LaunchSiteFilter(props) {
             <label>Kennedy Space Center</label>
             <input type="radio" name="site_selection" value=""></input>
             <label>Show All</label>
-            <button type="submit">Filter</button>
         </form>
     );
 

@@ -2,8 +2,9 @@ import { useState } from "react";
 
 /**
  * This hook takes the parameter onSubmit that is passed initially from App.js to the sorting, searching,
- * and filtering feature. Those features then pass onSubmit to this hook so that this_state can be passed
- * back to App.js, which then uses each feature's respective state in LaunchesContainer.
+ * and filtering features. Those features then pass onSubmit to this hook so that this_state or the 
+ * event.target.value can be passed back to App.js, which then uses each feature's respective information
+ * in LaunchesContainer.
  * 
  */
 
@@ -14,11 +15,16 @@ const UpdateSubmitHook = (onSubmit) => {
     const handleChange = (event) => {
         set_state(event.target.value);
     };
-    const handleSubmit = (event) => {
+
+    const handleSubmitSearch = (event) => {
         event.preventDefault()
-        //console.log(props)
         onSubmit(this_state);
     }
+    
+    const OneClickSubmit = (event) => {
+        onSubmit(event.target.value);
+    }
+   
 
     const clearSearch_state = () => {
         set_state("")
@@ -27,7 +33,8 @@ const UpdateSubmitHook = (onSubmit) => {
     return {
         this_state,
         handleChange,
-        handleSubmit,
+        handleSubmitSearch,
+        OneClickSubmit,
         clearSearch_state
     }
 }
