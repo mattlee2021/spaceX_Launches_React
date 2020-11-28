@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
 
 /**
  * Query used to fetch data from SpaceX GraphQL API.
@@ -20,4 +20,4 @@ query launchesPast($limit: Int, $filter_Mission:String, $filter_launchSite:Strin
             rocket_name
         }
     }
-}`;
+}`
