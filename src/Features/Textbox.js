@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 /**
  * A class component version of the notes textbox. I refactored this code to a functional
- * component that can be found in Notesbox because I read that functional components 
+ * component that can be found in NotesBox because I read that functional components 
  * are preferred over class components in industry. The Textbox component is not used 
  * in the app but is here to display an understanding of stateful components. 
  */
@@ -11,13 +11,12 @@ export default class Textbox extends Component{
     constructor(props){
         super(props)
         this.state = {
-            input_notes:''
+            inputNotes:''
         }
-            
     }
-    handleInputChange = (event) => {
+    handleInputChange = (event) => { 
         this.setState({
-            input_notes: event.target.value
+            inputNotes: event.target.value
         })
     }
     handleSubmit = (event) =>{
@@ -25,7 +24,7 @@ export default class Textbox extends Component{
         const copied_boolean = document.execCommand('copy');
         event.preventDefault();
         if (copied_boolean==true){
-            alert(`This note has been copied to the clipboard!`)
+            window.alert(`This note has been copied to the clipboard!`)
         }
     } 
     render(){
@@ -35,7 +34,7 @@ export default class Textbox extends Component{
                     <label>Notes</label>
                     <br></br>
                     <br></br>
-                    <textarea value={this.state.input_notes} onChange={this.handleInputChange} 
+                    <textarea value={this.state.inputNotes} onChange={this.handleInputChange} 
                     className="Notes_box" ref={(textarea) => this.textArea = textarea} />
                 </div>
                 <br></br>
