@@ -1,5 +1,5 @@
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
-import { LaunchesContainer } from "./PrimaryDisplay/LaunchesContainer";
+import LaunchesContainer from "./PrimaryDisplay/LaunchesContainer";
 import { useState } from "react";
 import "./App.css";
 import MissionNameSearch from "./Features/MissionNameSearch";

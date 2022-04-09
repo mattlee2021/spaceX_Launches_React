@@ -9,7 +9,7 @@ import Launches from "./DisplayLaunches";
  * If there are no errors and data has loaded, I am mapping each subset of launch data
  * to the <Launches /> component.
  */
-export function LaunchesContainer(props) {
+const LaunchesContainer = (props) => {
   // Used For Debugging
   console.log(
     "Searched: ",
@@ -43,4 +43,6 @@ export function LaunchesContainer(props) {
       </div>
     );
   }
-}
+};
+
+export default LaunchesContainer;
