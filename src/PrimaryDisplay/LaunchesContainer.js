@@ -29,17 +29,20 @@ const LaunchesContainer = (props) => {
   });
 
   if (loading) {
-    return <div className="Processing">Loading...</div>;
+    return <div className="processing__text">Loading...</div>;
   } else if (error) {
     console.error(error);
-    return <div className="Processing">Error. Check the console.</div>;
+    return <div className="processing__text">Error. Check the console.</div>;
   } else {
     return (
       <div className="launch__container">
-        {data.launchesPast &&
+        {data.launchesPast.length > 0 ? (
           data.launchesPast.map((launchData) => (
             <Launches key={launchData.id} launch={launchData} />
-          ))}
+          ))
+        ) : (
+          <div className="processing__text"> No Launches Found </div>
+        )}
       </div>
     );
   }
