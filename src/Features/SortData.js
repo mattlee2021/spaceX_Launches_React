@@ -11,7 +11,7 @@ const SortDataFeature = (props) => {
   const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form className="Filtering">
+    <form className="user-input__elements">
       <label htmlFor="sorting">Sort By: </label>
       <select onChange={oneClickSubmit} className="sort_box">
         <option value="">None</option>

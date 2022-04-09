@@ -35,7 +35,7 @@ const LaunchesContainer = (props) => {
     return <div className="Processing">Error. Check the console.</div>;
   } else {
     return (
-      <div className="container">
+      <div className="launch__container">
         {data.launchesPast &&
           data.launchesPast.map((launchData) => (
             <Launches key={launchData.id} launch={launchData} />

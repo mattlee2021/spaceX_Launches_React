@@ -29,7 +29,7 @@ const Launches = ({ launch }) => {
       </div>
       <br />
       <NotesBox />
-      <hr className="solid" />
+      <hr className="line__solid" />
     </div>
   );
 };

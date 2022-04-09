@@ -13,7 +13,7 @@ const LaunchSiteFilter = (props) => {
   const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form onChange={oneClickSubmit} className="Filtering">
+    <form onChange={oneClickSubmit} className="user-input__elements">
       <label htmlFor="filter_by_launchSite">Filter By Launch Site: </label>
       <input type="radio" name="site_selection" value="Kwajalein Atoll" />
       <label>Kwajalein Atoll</label>

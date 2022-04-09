@@ -14,8 +14,8 @@ const MissionNameSearch = (props) => {
     UpdateSubmitHook(onSubmit);
 
   return (
-    <form onSubmit={handleSubmitSearch}>
-      <div className="Filtering">
+    <form onSubmit={handleSubmitSearch} className="user-input__elements">
+      <div>
         <input
           className="Search_Mission_box"
           type="text"

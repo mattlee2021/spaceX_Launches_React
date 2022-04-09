@@ -38,9 +38,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <main>
-        <MissionNameSearch onSubmit={missionNameSearchedFetch} />
-        <LaunchSiteFilter onSubmit={launchSiteFilterFetch} />
-        <SortDataFeature onSubmit={sortBySortFetch} />
+        <div className="user-input-container">
+          <MissionNameSearch onSubmit={missionNameSearchedFetch} />
+          <LaunchSiteFilter onSubmit={launchSiteFilterFetch} />
+          <SortDataFeature onSubmit={sortBySortFetch} />
+        </div>
         <LaunchesContainer
           search={missionNameSearchedState}
           launchSite_filter={launchSiteFilterState}
