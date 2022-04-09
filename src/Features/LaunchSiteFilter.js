@@ -1,4 +1,4 @@
-import UpdateSubmitHook from '../CustomHooks/updateAndSubmit'
+import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 /**
  * This component displays a form with radio buttons so that a user can filter by one of three SpaceX
  * launch sites. I chose to use radio buttons because the SpaceX GraphQL find query takes a single
@@ -8,21 +8,23 @@ import UpdateSubmitHook from '../CustomHooks/updateAndSubmit'
  * input when an empty string is passed in, so for the Show All option, the value is an empty String.
  */
 
-export function LaunchSiteFilter (props) {
-  const { onSubmit } = props
-  const { oneClickSubmit } = UpdateSubmitHook(onSubmit)
+const LaunchSiteFilter = (props) => {
+  const { onSubmit } = props;
+  const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form onChange={oneClickSubmit} className='Filtering'>
-      <label htmlFor='filter_by_launchSite'>Filter By Launch Site: </label>
-      <input type='radio' name='site_selection' value='Kwajalein Atoll' />
+    <form onChange={oneClickSubmit} className="Filtering">
+      <label htmlFor="filter_by_launchSite">Filter By Launch Site: </label>
+      <input type="radio" name="site_selection" value="Kwajalein Atoll" />
       <label>Kwajalein Atoll</label>
-      <input type='radio' name='site_selection' value='Cape Canaveral' />
+      <input type="radio" name="site_selection" value="Cape Canaveral" />
       <label>Cape Canaveral</label>
-      <input type='radio' name='site_selection' value='Kennedy Space Center' />
+      <input type="radio" name="site_selection" value="Kennedy Space Center" />
       <label>Kennedy Space Center</label>
-      <input type='radio' name='site_selection' value='' />
+      <input type="radio" name="site_selection" value="" />
       <label>Show All</label>
     </form>
-  )
-}
+  );
+};
+
+export default LaunchSiteFilter;

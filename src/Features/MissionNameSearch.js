@@ -1,4 +1,4 @@
-import UpdateSubmitHook from '../CustomHooks/updateAndSubmit'
+import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 
 /**
  * This function allows a user to search for SpaceX Launches by mission name. A user can type in any String
@@ -8,23 +8,28 @@ import UpdateSubmitHook from '../CustomHooks/updateAndSubmit'
  * Similarly, a user can manually clear out the search box and hit submit to reset the search.
  */
 
-export function MissionNameSearch (props) {
-  const { onSubmit } = props
-  const { handleChange, clearSearchState, thisState, handleSubmitSearch } = UpdateSubmitHook(onSubmit)
+const MissionNameSearch = (props) => {
+  const { onSubmit } = props;
+  const { handleChange, clearSearchState, thisState, handleSubmitSearch } =
+    UpdateSubmitHook(onSubmit);
 
   return (
     <form onSubmit={handleSubmitSearch}>
-      <div className='Filtering'>
+      <div className="Filtering">
         <input
-          className='Search_Mission_box'
-          type='text'
-          placeholder='Search For Any Past SpaceX Mission'
+          className="Search_Mission_box"
+          type="text"
+          placeholder="Search For Any Past SpaceX Mission"
           value={thisState}
           onChange={handleChange}
         />
-        <button type='submit'>Search</button>
-        <button type='reset' onClick={clearSearchState}>Clear Search</button>
+        <button type="submit">Search</button>
+        <button type="reset" onClick={clearSearchState}>
+          Clear Search
+        </button>
       </div>
     </form>
-  )
-}
+  );
+};
+
+export default MissionNameSearch;
