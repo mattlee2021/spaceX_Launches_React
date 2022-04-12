@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 /**
  * This hook takes the parameter onSubmit that is passed initially from App.js to the sorting, searching,
@@ -9,24 +9,24 @@ import { useState } from 'react'
  */
 
 const UpdateSubmitHook = (onSubmit) => {
-  const [thisState, setState] = useState('')
+  const [thisState, setState] = useState("");
 
   const handleChange = (event) => {
-    setState(event.target.value)
-  }
+    setState(event.target.value);
+  };
 
   const handleSubmitSearch = (event) => {
-    event.preventDefault()
-    onSubmit(thisState)
-  }
+    event.preventDefault();
+    onSubmit(thisState);
+  };
 
   const oneClickSubmit = (event) => {
-    onSubmit(event.target.value)
-  }
+    onSubmit(event.target.value);
+  };
 
   const clearSearchState = () => {
-    setState('')
-  }
+    setState("");
+  };
 
   return {
     thisState,
@@ -34,7 +34,7 @@ const UpdateSubmitHook = (onSubmit) => {
     handleSubmitSearch,
     oneClickSubmit,
     clearSearchState
-  }
-}
+  };
+};
 
-export default UpdateSubmitHook
+export default UpdateSubmitHook;

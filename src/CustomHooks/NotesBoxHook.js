@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState } from "react";
 
 /**
  * Using useState() to declare state variable inputNotes and declaring textAreaRef, which
@@ -8,28 +8,28 @@ import { useRef, useState } from 'react'
  */
 
 const NotesBoxHook = () => {
-  const [inputNotes, setInputNotes] = useState('')
-  const textAreaRef = useRef(null)
+  const [inputNotes, setInputNotes] = useState("");
+  const textAreaRef = useRef(null);
 
   const handleChangeNotes = (event) => {
-    setInputNotes(event.target.value)
-  }
+    setInputNotes(event.target.value);
+  };
 
   const handleSubmitNotes = (event) => {
-    textAreaRef.current.select()
-    const copiedBoolean = document.execCommand('copy')
-    event.preventDefault()
+    textAreaRef.current.select();
+    const copiedBoolean = document.execCommand("copy");
+    event.preventDefault();
     if (copiedBoolean === true) {
-      window.alert('This note has been copied to the clipboard!')
+      window.alert("This note has been copied to the clipboard!");
     }
-  }
+  };
 
   return {
     handleChangeNotes,
     inputNotes,
     handleSubmitNotes,
     textAreaRef
-  }
-}
+  };
+};
 
-export default NotesBoxHook
+export default NotesBoxHook;
