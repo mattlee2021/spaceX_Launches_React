@@ -10,18 +10,9 @@ import Launches from "./DisplayLaunches";
  * to the <Launches /> component.
  */
 const LaunchesContainer = (props) => {
-  // Used For Debugging
-  console.log(
-    "Searched: ",
-    props.search,
-    "; Filter is ",
-    props.launchSite_filter,
-    "; Sort By ",
-    props.sort
-  );
   const { data, loading, error } = useQuery(GET_LAUNCHES, {
     variables: {
-      limit: 20,
+      limit: 10,
       filter_Mission: props.search,
       filter_launchSite: props.launchSite_filter,
       sort_by: props.sort
