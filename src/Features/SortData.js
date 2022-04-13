@@ -1,4 +1,5 @@
 import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
+import styles from "./SortData.module.css";
 
 /**
  * This function sorts the displayed information from the SpaceX GraphQL API. Since the Launch Site and
@@ -11,9 +12,9 @@ const SortDataFeature = (props) => {
   const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form className="user-input__elements">
+    <form>
       <label htmlFor="sorting">Sort By: </label>
-      <select onChange={oneClickSubmit} className="sort_box">
+      <select onChange={oneClickSubmit} className={styles.sort_input}>
         <option value="">None</option>
         <option value="site_name_long">Launch Site</option>
         <option value="launch_date_local">Launch Date</option>

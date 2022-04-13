@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_LAUNCHES } from "../GraphQL/get_launches";
 import Launches from "./DisplayLaunches";
+import styles from "./LaunchesContainer.module.css";
 
 /**
  * Fetching 10 SpaceX Launches with limit:10 that is passed to GET_LAUNCHES.
@@ -15,24 +16,26 @@ const LaunchesContainer = (props) => {
       limit: 10,
       filter_Mission: props.search,
       filter_launchSite: props.launchSite_filter,
-      sort_by: props.sort
-    }
+      sort_by: props.sort,
+    },
   });
 
   if (loading) {
-    return <div className="processing__text">Loading...</div>;
+    return <div className={styles.processing__text}>Loading...</div>;
   } else if (error) {
     console.error(error);
-    return <div className="processing__text">Error. Check the console.</div>;
+    return (
+      <div className={styles.processing__text}>Error. Check the console.</div>
+    );
   } else {
     return (
-      <div className="launch__container">
+      <div className={styles.launch__container}>
         {data.launchesPast.length > 0 ? (
           data.launchesPast.map((launchData) => (
             <Launches key={launchData.id} launch={launchData} />
           ))
         ) : (
-          <div className="processing__text"> No Launches Found </div>
+          <div className={styles.processing__text}> No Launches Found </div>
         )}
       </div>
     );

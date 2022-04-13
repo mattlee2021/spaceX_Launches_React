@@ -1,7 +1,7 @@
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import LaunchesContainer from "./PrimaryDisplay/LaunchesContainer";
 import { useState } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import MissionNameSearch from "./Features/MissionNameSearch";
 import SortDataFeature from "./Features/SortData";
 import LaunchSiteFilter from "./Features/LaunchSiteFilter";
@@ -16,7 +16,7 @@ import LaunchSiteFilter from "./Features/LaunchSiteFilter";
 function App() {
   const client = new ApolloClient({
     uri: "https://api.spacex.land/graphql/",
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const [missionNameSearchedState, searchedSet] = useState("");
@@ -38,7 +38,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <main>
-        <div className="user-input-container">
+        <div className={styles.input__container}>
           <MissionNameSearch onSubmit={missionNameSearchedFetch} />
           <LaunchSiteFilter onSubmit={launchSiteFilterFetch} />
           <SortDataFeature onSubmit={sortBySortFetch} />

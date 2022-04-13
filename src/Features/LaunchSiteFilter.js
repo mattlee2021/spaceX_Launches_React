@@ -1,4 +1,5 @@
 import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
+import styles from "./LaunchSiteFilter.module.css";
 /**
  * This component displays a form with radio buttons so that a user can filter by one of three SpaceX
  * launch sites. I chose to use radio buttons because the SpaceX GraphQL find query takes a single
@@ -13,7 +14,7 @@ const LaunchSiteFilter = (props) => {
   const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
 
   return (
-    <form onChange={oneClickSubmit} className="user-input__elements">
+    <form onChange={oneClickSubmit} className={styles.launchSite__filter}>
       <label htmlFor="filter_by_launchSite">Filter By Launch Site: </label>
       <input type="radio" name="site_selection" value="Kwajalein Atoll" />
       <label>Kwajalein Atoll</label>

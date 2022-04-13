@@ -1,0 +1,16 @@
+.processing__text {
+  font-size: 90px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 10rem;
+}
+
+.launch__container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 17rem;
+}

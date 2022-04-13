@@ -1,4 +1,5 @@
 import NotesBoxHook from "../CustomHooks/NotesBoxHook";
+import styles from "./Notesbox.module.css";
 /**
  * This is a functional component of the notes textbox. A custom hook is imported to
  * handle updating the words displayed in the textbox and copying the text onto the user's
@@ -10,7 +11,7 @@ const NotesBox = () => {
     NotesBoxHook();
 
   return (
-    <form onSubmit={handleSubmitNotes} className="Notes_form">
+    <form onSubmit={handleSubmitNotes} className={styles.Notes_form}>
       <div>
         <label>Notes</label>
         <br />
@@ -18,7 +19,7 @@ const NotesBox = () => {
         <textarea
           value={inputNotes}
           onChange={handleChangeNotes}
-          className="Notes_box"
+          className={styles.notes__input}
           ref={textAreaRef}
         />
       </div>

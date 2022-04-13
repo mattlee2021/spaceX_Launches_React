@@ -1,4 +1,5 @@
 import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
+import styles from "./MissionNameSearch.module.css";
 
 /**
  * This function allows a user to search for SpaceX Launches by mission name. A user can type in any String
@@ -14,10 +15,10 @@ const MissionNameSearch = (props) => {
     UpdateSubmitHook(onSubmit);
 
   return (
-    <form onSubmit={handleSubmitSearch} className="user-input__elements">
+    <form onSubmit={handleSubmitSearch}>
       <div>
         <input
-          className="Search_Mission_box"
+          className={styles.search__input}
           type="text"
           placeholder="Search For Any Past SpaceX Mission"
           value={thisState}

@@ -1,0 +1,12 @@
+.sort_input {
+  width: 200px;
+  border: 1px solid var(--select-border);
+  height: 35px;
+  font-size: 15px;
+  border-radius: 0.25em;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
