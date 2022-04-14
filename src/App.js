@@ -23,10 +23,6 @@ function App() {
   const [launchSiteFilter, setLaunchSiteFilter] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
 
-  const launchSiteFilterFetch = (launchSitePass) => {
-    setLaunchSiteFilter(launchSitePass);
-  };
-
   const sortBySortFetch = (sortPass) => {
     setSortCriteria(sortPass);
   };
@@ -36,7 +32,7 @@ function App() {
       <main>
         <div className={styles.input__container}>
           <MissionNameSearch setMissionNameSearch={setMissionNameSearch} />
-          <LaunchSiteFilter onSubmit={launchSiteFilterFetch} />
+          <LaunchSiteFilter setLaunchSiteFilter={setLaunchSiteFilter} />
           <SortDataFeature onSubmit={sortBySortFetch} />
         </div>
         <LaunchesContainer

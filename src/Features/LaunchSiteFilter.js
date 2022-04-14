@@ -1,4 +1,3 @@
-import UpdateSubmitHook from "../CustomHooks/updateAndSubmit";
 import styles from "./LaunchSiteFilter.module.css";
 /**
  * This component displays a form with radio buttons so that a user can filter by one of three SpaceX
@@ -10,11 +9,13 @@ import styles from "./LaunchSiteFilter.module.css";
  */
 
 const LaunchSiteFilter = (props) => {
-  const { onSubmit } = props;
-  const { oneClickSubmit } = UpdateSubmitHook(onSubmit);
+  const { setLaunchSiteFilter } = props;
 
   return (
-    <form onChange={oneClickSubmit} className={styles.launchSite__filter}>
+    <form
+      onChange={(event) => setLaunchSiteFilter(event.target.value)}
+      className={styles.launchSite__filter}
+    >
       <label htmlFor="filter_by_launchSite">Filter By Launch Site: </label>
       <input type="radio" name="site_selection" value="Kwajalein Atoll" />
       <label>Kwajalein Atoll</label>
@@ -22,7 +23,7 @@ const LaunchSiteFilter = (props) => {
       <label>Cape Canaveral</label>
       <input type="radio" name="site_selection" value="Kennedy Space Center" />
       <label>Kennedy Space Center</label>
-      <input type="radio" name="site_selection" value="" />
+      <input type="radio" name="site_selection" value="" defaultChecked />
       <label>Show All</label>
     </form>
   );
