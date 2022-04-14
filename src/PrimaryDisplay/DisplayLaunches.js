@@ -11,14 +11,14 @@ import styles from "./DisplayLaunches.module.css";
  */
 
 const Launches = ({ launch }) => {
-  const localTime = new Date(launch.launch_date_utc);
-  const timeToDisplay = localTime.toLocaleString();
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const launchUTCTime = new Date(launch.launch_date_utc);
+  const launchLocalTime = launchUTCTime.toLocaleString();
+  const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   return (
     <div className={styles.launch__items}>
       <p>Mission Name: {launch.mission_name}</p>
       {/* <p>Launch Date: {launch.launch_date_utc}</p> */}
-      <p>Launch Date: {timeToDisplay + " " + timeZone}</p>
+      <p>Launch Date: {launchLocalTime + " " + localTimeZone}</p>
       <p>Launch Site: {launch.launch_site.site_name_long}</p>
       <p>Rocket Name: {launch.rocket.rocket_name}</p>
 
