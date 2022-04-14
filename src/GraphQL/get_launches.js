@@ -21,7 +21,7 @@ export const GET_LAUNCHES = gql`
     ) {
       id
       mission_name
-      launch_date_local
+      launch_date_utc
       launch_site {
         site_name_long
       }

@@ -23,10 +23,6 @@ function App() {
   const [launchSiteFilter, setLaunchSiteFilter] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
 
-  const sortBySortFetch = (sortPass) => {
-    setSortCriteria(sortPass);
-  };
-
   return (
     <ApolloProvider client={client}>
       <main>
