@@ -19,34 +19,30 @@ function App() {
     cache: new InMemoryCache(),
   });
 
-  const [missionNameSearchedState, searchedSet] = useState("");
-  const [launchSiteFilterState, launchSiteSet] = useState("");
-  const [sortBySortState, sortedSet] = useState("");
-
-  const missionNameSearchedFetch = (searchPass) => {
-    searchedSet(searchPass);
-  };
+  const [missionNameSearch, setMissionNameSearch] = useState("");
+  const [launchSiteFilter, setLaunchSiteFilter] = useState("");
+  const [sortCriteria, setSortCriteria] = useState("");
 
   const launchSiteFilterFetch = (launchSitePass) => {
-    launchSiteSet(launchSitePass);
+    setLaunchSiteFilter(launchSitePass);
   };
 
   const sortBySortFetch = (sortPass) => {
-    sortedSet(sortPass);
+    setSortCriteria(sortPass);
   };
 
   return (
     <ApolloProvider client={client}>
       <main>
         <div className={styles.input__container}>
-          <MissionNameSearch onSubmit={missionNameSearchedFetch} />
+          <MissionNameSearch setMissionNameSearch={setMissionNameSearch} />
           <LaunchSiteFilter onSubmit={launchSiteFilterFetch} />
           <SortDataFeature onSubmit={sortBySortFetch} />
         </div>
         <LaunchesContainer
-          search={missionNameSearchedState}
-          launchSite_filter={launchSiteFilterState}
-          sort={sortBySortState}
+          search={missionNameSearch}
+          launchSite_filter={launchSiteFilter}
+          sort={sortCriteria}
         />
       </main>
     </ApolloProvider>
