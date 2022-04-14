@@ -3,7 +3,7 @@ import LaunchesContainer from "./PrimaryDisplay/LaunchesContainer";
 import { useState } from "react";
 import styles from "./App.module.css";
 import MissionNameSearch from "./Features/MissionNameSearch";
-import SortDataFeature from "./Features/SortData";
+import SortData from "./Features/SortData";
 import LaunchSiteFilter from "./Features/LaunchSiteFilter";
 
 /**
@@ -33,7 +33,7 @@ function App() {
         <div className={styles.input__container}>
           <MissionNameSearch setMissionNameSearch={setMissionNameSearch} />
           <LaunchSiteFilter setLaunchSiteFilter={setLaunchSiteFilter} />
-          <SortDataFeature onSubmit={sortBySortFetch} />
+          <SortData setSortCriteria={setSortCriteria} />
         </div>
         <LaunchesContainer
           search={missionNameSearch}
