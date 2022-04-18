@@ -4,12 +4,6 @@ import { GET_LAUNCHES } from "../GraphQL/get_launches";
 import Launches from "./DisplayLaunches";
 import styles from "./LaunchesContainer.module.css";
 
-/**
- * Fetching 10 SpaceX Launches with limit:10 that is passed to GET_LAUNCHES.
- * Displaying either Loading and Error messages that are passed from useQuery()
- * If there are no errors and data has loaded, I am mapping each subset of launch data
- * to the <Launches /> component.
- */
 const LaunchesContainer = (props) => {
   const { data, loading, error } = useQuery(GET_LAUNCHES, {
     variables: {
