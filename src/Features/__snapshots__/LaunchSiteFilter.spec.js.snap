@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchSiteFilter Should match the snapshot 1`] = `
+<form
+  className="launchSite__filter"
+  onChange={[Function]}
+>
+  <label
+    htmlFor="filter_by_launchSite"
+  >
+    Filter By Launch Site: 
+  </label>
+  <input
+    id="Kwajalein Atoll"
+    name="site_selection"
+    type="radio"
+    value="Kwajalein Atoll"
+  />
+  <label
+    htmlFor="Kwajalein Atoll"
+  >
+    Kwajalein Atoll
+  </label>
+  <input
+    id="Cape Canaveral"
+    name="site_selection"
+    type="radio"
+    value="Cape Canaveral"
+  />
+  <label
+    htmlFor="Cape Canaveral"
+  >
+    Cape Canaveral
+  </label>
+  <input
+    id="Kennedy Space Center"
+    name="site_selection"
+    type="radio"
+    value="Kennedy Space Center"
+  />
+  <label
+    htmlFor="Kennedy Space Center"
+  >
+    Kennedy Space Center
+  </label>
+  <input
+    defaultChecked={true}
+    id="Show All"
+    name="site_selection"
+    type="radio"
+    value=""
+  />
+  <label
+    htmlFor="Show All"
+  >
+    Show All
+  </label>
+</form>
+`;
