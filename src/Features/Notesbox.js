@@ -9,7 +9,7 @@ const NotesBox = () => {
   };
 
   return (
-    <form className={styles.Notes_form}>
+    <form className={styles.notes_form}>
       <div>
         <label>Notes</label>
         <br />
