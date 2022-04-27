@@ -2,6 +2,10 @@ import styles from "./SortData.module.css";
 
 const SortData = (props) => {
   const { setSortCriteria } = props;
+  // similar to launchsitefilter
+  // setLaunchSiteFilter getting called with the correct property;
+  // snapshot -> snapshot test and logic testing
+  // snapshot too since it is HTML
 
   return (
     <form>

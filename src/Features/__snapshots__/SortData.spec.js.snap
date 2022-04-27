@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortData Should match the snapshot 1`] = `
+<form>
+  <label>
+    Sort By: 
+  </label>
+  <select
+    className="sort_input"
+    onChange={[Function]}
+  >
+    <option
+      value=""
+    >
+      None
+    </option>
+    <option
+      value="site_name_long"
+    >
+      Launch Site
+    </option>
+    <option
+      value="launch_date_local"
+    >
+      Launch Date
+    </option>
+    <option
+      value="mission_name"
+    >
+      Mission Name
+    </option>
+  </select>
+</form>
+`;
