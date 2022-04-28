@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launch Should match the snapshot with the mocked data 1`] = `
+<div
+  className="launch__items"
+>
+  <p>
+    Mission Name: 
+    Starlink-15 (v1.0)
+  </p>
+  <p>
+    Launch Date: 
+    Invalid Date America/New_York
+  </p>
+  <p>
+    Launch Site: 
+    Cape Canaveral Air Force Station Space Launch Complex 40
+  </p>
+  <p>
+    Rocket Name: 
+    Falcon 9
+  </p>
+  <div
+    className="launch__video"
+    style={
+      Object {
+        "height": "360px",
+        "width": "640px",
+      }
+    }
+  />
+  <form
+    className="notes_form"
+  >
+    <div>
+      <label>
+        Notes
+      </label>
+      <br />
+      <br />
+      <textarea
+        className="notes__input"
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+    <br />
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Copy This Note To Clipboard
+    </button>
+  </form>
+  <hr
+    className="line__solid"
+  />
+</div>
+`;

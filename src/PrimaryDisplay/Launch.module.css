@@ -1,0 +1,13 @@
+.launch__items {
+  text-align: center;
+}
+
+.launch__video {
+  margin-bottom: 2re;
+  display: block;
+}
+
+.line__solid {
+  border-top: 3px solid whitesmoke;
+  border-bottom: whitesmoke;
+}
