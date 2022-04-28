@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionNameSearch Should match the snapshot 1`] = `
+<form>
+  <input
+    className="search__input"
+    onChange={[Function]}
+    placeholder="Search For Any Past SpaceX Mission"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+    type="submit"
+  >
+    Search
+  </button>
+  <button
+    onClick={[Function]}
+    type="reset"
+  >
+    Clear Search
+  </button>
+</form>
+`;
