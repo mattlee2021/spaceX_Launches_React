@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotesBox Should match the snapshot 1`] = `
+<form
+  className="notes_form"
+>
+  <div>
+    <label>
+      Notes
+    </label>
+    <br />
+    <br />
+    <textarea
+      className="notes__input"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <br />
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Copy This Note To Clipboard
+  </button>
+</form>
+`;
