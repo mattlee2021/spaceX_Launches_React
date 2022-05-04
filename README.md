@@ -1,4 +1,4 @@
-# React Page using SpaceX GraphQL API
+# React App using SpaceX GraphQL API
 This react page pulls in data from the SpaceX GraphQL API. The GraphQL fields displayed concern different SpaceX missions with information on place/date of launch, rocket used, and an official SpaceX video of the launch. 
 
 # Installation 
