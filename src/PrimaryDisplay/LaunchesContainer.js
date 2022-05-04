@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_LAUNCHES } from "../GraphQL/get_launches";
-import Launches from "./DisplayLaunches";
+import Launch from "./Launch";
 import styles from "./LaunchesContainer.module.css";
 
 const LaunchesContainer = (props) => {
@@ -17,16 +17,17 @@ const LaunchesContainer = (props) => {
   if (loading) {
     return <div className={styles.processing__text}>Loading...</div>;
   } else if (error) {
-    console.error(error);
     return (
-      <div className={styles.processing__text}>Error. Check the console.</div>
+      <div className={styles.processing__text}>
+        Error... Please Refresh The Page
+      </div>
     );
   } else {
     return (
       <div className={styles.launch__container}>
         {data.launchesPast.length > 0 ? (
           data.launchesPast.map((launchData) => (
-            <Launches key={launchData.id} launch={launchData} />
+            <Launch key={launchData.id} launch={launchData} />
           ))
         ) : (
           <div className={styles.processing__text}> No Launches Found </div>

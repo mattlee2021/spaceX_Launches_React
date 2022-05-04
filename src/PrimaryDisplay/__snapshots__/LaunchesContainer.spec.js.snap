@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchesContainer Should display the mocked data 1`] = `
+<div
+  className="launch__container"
+>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-15 (v1.0)
+    </p>
+    <p>
+      Launch Date: 
+      10/24/2020, 11:31:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Cape Canaveral Air Force Station Space Launch Complex 40
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Sentinel-6 Michael Freilich
+    </p>
+    <p>
+      Launch Date: 
+      11/21/2020, 12:17:00 PM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Vandenberg Air Force Base Space Launch Complex 4E
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Crew-1
+    </p>
+    <p>
+      Launch Date: 
+      11/15/2020, 7:27:00 PM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Kennedy Space Center Historic Launch Complex 39A
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      GPS III SV04 (Sacagawea)
+    </p>
+    <p>
+      Launch Date: 
+      11/5/2020, 6:24:00 PM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Cape Canaveral Air Force Station Space Launch Complex 40
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-14 (v1.0)
+    </p>
+    <p>
+      Launch Date: 
+      10/24/2020, 11:31:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Cape Canaveral Air Force Station Space Launch Complex 40
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-13 (v1.0)
+    </p>
+    <p>
+      Launch Date: 
+      10/18/2020, 8:25:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Kennedy Space Center Historic Launch Complex 39A
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-12 (v1.0)
+    </p>
+    <p>
+      Launch Date: 
+      10/6/2020, 7:29:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Kennedy Space Center Historic Launch Complex 39A
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-11 (v1.0)
+    </p>
+    <p>
+      Launch Date: 
+      9/3/2020, 8:46:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Kennedy Space Center Historic Launch Complex 39A
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      SAOCOM 1B, GNOMES-1, Tyvak-0172
+    </p>
+    <p>
+      Launch Date: 
+      8/30/2020, 7:18:00 PM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Cape Canaveral Air Force Station Space Launch Complex 40
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-10 (v1.0) & SkySat 19-21
+    </p>
+    <p>
+      Launch Date: 
+      8/18/2020, 10:31:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Cape Canaveral Air Force Station Space Launch Complex 40
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+  <div
+    className="launch__items"
+  >
+    <p>
+      Mission Name: 
+      Starlink-9 (v1.0) & BlackSky Global 5-6
+    </p>
+    <p>
+      Launch Date: 
+      8/7/2020, 1:12:00 AM America/New_York
+    </p>
+    <p>
+      Launch Site: 
+      Kennedy Space Center Historic Launch Complex 39A
+    </p>
+    <p>
+      Rocket Name: 
+      Falcon 9
+    </p>
+    <div
+      className="launch__video"
+      style={
+        Object {
+          "height": "360px",
+          "width": "640px",
+        }
+      }
+    />
+    <form
+      className="notes_form"
+    >
+      <div>
+        <label>
+          Notes
+        </label>
+        <br />
+        <br />
+        <textarea
+          className="notes__input"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <br />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Copy This Note To Clipboard
+      </button>
+    </form>
+    <hr
+      className="line__solid"
+    />
+  </div>
+</div>
+`;
